@@ -229,6 +229,9 @@ footer a:hover { text-decoration: underline; }
 .card .icon.c-blue   { background: linear-gradient(135deg, #38bdf8, #1d4ed8); color: #fff; }
 .card .icon.c-orange { background: linear-gradient(135deg, #fb923c, #ea580c); color: #fff; }
 .card .icon.c-red    { background: linear-gradient(135deg, #fb7185, #e11d48); color: #fff; }
+.card .icon.c-teal   { background: linear-gradient(135deg, #2dd4bf, #0d9488); color: #fff; }
+.card .icon.c-pink   { background: linear-gradient(135deg, #f472b6, #db2777); color: #fff; }
+.card .icon.c-sky    { background: linear-gradient(135deg, #7dd3fc, #0284c7); color: #fff; }
 .card { transition: transform .25s ease, box-shadow .25s ease; }
 .card:hover { transform: translateY(-3px); box-shadow: 0 2px 4px rgba(13,42,77,.06), 0 18px 40px rgba(13,42,77,.12); }
 
@@ -246,9 +249,9 @@ footer a:hover { text-decoration: underline; }
   html.reveal-ready .reveal { opacity: 0; transform: translateY(26px);
                               transition: opacity .7s ease, transform .7s cubic-bezier(.2, .7, .2, 1); }
   html.reveal-ready .reveal.visible { opacity: 1; transform: none; }
-  html.reveal-ready .grid .reveal:nth-child(3n+2), html.reveal-ready .gallery .reveal:nth-child(2),
+  html.reveal-ready .grid .reveal:nth-child(3n+2), html.reveal-ready .gallery .reveal:nth-child(4n+2),
   html.reveal-ready .steps .reveal:nth-child(2) { transition-delay: .08s; }
-  html.reveal-ready .grid .reveal:nth-child(3n), html.reveal-ready .gallery .reveal:nth-child(3),
+  html.reveal-ready .grid .reveal:nth-child(3n), html.reveal-ready .gallery .reveal:nth-child(4n+3),
   html.reveal-ready .steps .reveal:nth-child(3) { transition-delay: .16s; }
-  html.reveal-ready .gallery .reveal:nth-child(4) { transition-delay: .24s; }
+  html.reveal-ready .gallery .reveal:nth-child(4n) { transition-delay: .24s; }
 }

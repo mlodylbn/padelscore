@@ -6,10 +6,10 @@
 <title>PadelScore – wynik padla na Apple Watch i iPhonie</title>
 <meta name="title-pl" content="PadelScore – wynik padla na Apple Watch i iPhonie">
 <meta name="title-en" content="PadelScore – padel scoring for Apple Watch and iPhone">
-<meta name="description" content="PadelScore liczy wynik meczu padla na Apple Watch i iPhonie: punkty gestem Double Tap bez dotykania zegarka, serwis, Golden i Star Point, statystyki i grafika z wynikiem. Bez kont i bez zbierania danych.">
+<meta name="description" content="PadelScore liczy wynik meczu padla na Apple Watch i iPhonie: punkty gestem Double Tap, serwis, mecz towarzyski lub turniejowy, break pointy i piłki meczowe, czas na zmianę stron, historia i statystyki. Bez kont i bez zbierania danych.">
 <link rel="canonical" href="https://www.padelscore.pl/">
 <meta property="og:title" content="PadelScore – wynik padla na Apple Watch">
-<meta property="og:description" content="Licz punkty gestem Double Tap, bez dotykania zegarka. Gemy, sety, tie-breaki i serwis liczą się same.">
+<meta property="og:description" content="Licz punkty gestem Double Tap, bez dotykania zegarka. Gemy, sety, tie-breaki, serwis i zmiana stron liczą się same.">
 <meta property="og:image" content="https://www.padelscore.pl/assets/share-card.jpg">
 <meta property="og:url" content="https://www.padelscore.pl/">
 <meta property="og:type" content="website">
@@ -26,7 +26,7 @@
   "name": "PadelScore",
   "operatingSystem": "iOS, watchOS",
   "applicationCategory": "SportsApplication",
-  "description": "Padel scoring for Apple Watch and iPhone: Double Tap scoring, serve rotation, Golden Point and Star Point, match statistics and a shareable result image.",
+  "description": "Padel scoring for Apple Watch and iPhone: Double Tap scoring, serve rotation, friendly and tournament matches, break and match points, a change of ends timer, Golden Point and Star Point, match history, statistics and a shareable result image.",
   "url": "https://www.padelscore.pl/",
   "image": "https://www.padelscore.pl/assets/icon.png",
   "inLanguage": ["pl", "en", "de", "es", "fr", "it", "ru", "zh-Hans"],
@@ -48,6 +48,9 @@
   <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.6-3.4 8.4-8 9-4.6-.6-8-4.4-8-9V6z"/><path d="M9 12l2 2 4-4"/></symbol>
   <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
   <symbol id="i-share" viewBox="0 0 24 24"><path d="M12 3v12M7.5 7.5L12 3l4.5 4.5M5 13v5a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3v-5"/></symbol>
+  <symbol id="i-medal" viewBox="0 0 24 24"><path d="M8 3h8l-2.5 6h-3z"/><circle cx="12" cy="15" r="5.5"/><path d="M12 12.5v5M10.5 14l1.5-1.5"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13.5 2.5L5 13.5h6l-1 8 8.5-11h-6z"/></symbol>
+  <symbol id="i-palette" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18c1.4 0 2-.9 2-1.9 0-1.4-1.2-1.7-1.2-3 0-1 .8-1.6 1.9-1.6H17a4 4 0 0 0 4-4C21 6.4 17 3 12 3z"/><circle cx="7.5" cy="11.5" r="1.2"/><circle cx="10" cy="7.5" r="1.2"/><circle cx="14.5" cy="7.5" r="1.2"/></symbol>
 </svg>
 
 <header class="top">
@@ -98,7 +101,7 @@
       </p>
     </div>
     <div class="devices">
-      <div class="phone"><img src="assets/iphone-score-dark.jpg" width="506" height="1100" alt="Ekran meczu w PadelScore na iPhonie: Anna / Adam 30, Kasia / Ewa 15, gemy 2:1"></div>
+      <div class="phone"><img src="assets/iphone-score.jpg" width="506" height="1100" alt="Ekran meczu w PadelScore na iPhonie: Anna / Adam 40, Kasia / Ewa 15, gemy 5:3, piłka setowa"></div>
       <div class="watch"><img src="assets/watch-score.png" width="422" height="514" alt="PadelScore na Apple Watch: wynik i przycisk Double Tap"></div>
     </div>
   </div>
@@ -120,7 +123,17 @@
       <article class="card reveal">
         <div class="icon c-yellow"><svg class="i"><use href="#i-ball"/></svg></div>
         <h3><span lang="pl">Kto serwuje i&nbsp;skąd</span><span lang="en">Who serves, and from where</span></h3>
-        <p><span lang="pl">Rotacja serwisu z&nbsp;imionami graczy, strona serwisu i&nbsp;przypomnienie o&nbsp;zmianie stron.</span><span lang="en">Serve rotation with player names, the serving side and a change-of-ends reminder.</span></p>
+        <p><span lang="pl">Przed meczem wybierasz, kto serwuje. Potem aplikacja sama pilnuje rotacji serwisu, imion graczy i&nbsp;strony serwisu.</span><span lang="en">Pick who serves before the match. The app then follows the serve rotation, player names and serving side for you.</span></p>
+      </article>
+      <article class="card reveal">
+        <div class="icon c-teal"><svg class="i"><use href="#i-medal"/></svg></div>
+        <h3><span lang="pl">Mecz towarzyski lub turniejowy</span><span lang="en">Friendly or tournament match</span></h3>
+        <p><span lang="pl">Towarzyski: zmiana stron po secie. Turniejowy: po nieparzystych gemach, jak w&nbsp;przepisach. Do tego opcjonalne odliczanie czasu na zmianę stron: 90, 120 lub 180&nbsp;s.</span><span lang="en">Friendly: change ends after each set. Tournament: after odd games, as in the rules. Plus an optional change of ends timer: 90, 120 or 180&nbsp;s.</span></p>
+      </article>
+      <article class="card reveal">
+        <div class="icon c-orange"><svg class="i"><use href="#i-bolt"/></svg></div>
+        <h3><span lang="pl">Break point i&nbsp;piłka meczowa</span><span lang="en">Break point and match point</span></h3>
+        <p><span lang="pl">Aplikacja podpowiada break pointy, piłki setowe i&nbsp;meczowe na iPhonie, zegarku i&nbsp;ekranie blokady.</span><span lang="en">Break points, set points and match points are shown on iPhone, Apple&nbsp;Watch and the Lock Screen.</span></p>
       </article>
       <article class="card reveal">
         <div class="icon c-violet"><svg class="i"><use href="#i-star"/></svg></div>
@@ -128,12 +141,17 @@
         <p><span lang="pl">Przewagi, Golden Point lub Star Point (FIP&nbsp;2026). 1, 3 lub 5 setów, krótkie sety i&nbsp;super tie-break.</span><span lang="en">Advantage, Golden Point or Star Point (FIP&nbsp;2026). 1, 3 or 5 sets, short sets and super tie-break.</span></p>
       </article>
       <article class="card reveal">
-        <div class="icon c-blue"><svg class="i"><use href="#i-chart"/></svg></div>
-        <h3><span lang="pl">Statystyki meczu</span><span lang="en">Match statistics</span></h3>
-        <p><span lang="pl">Punkty, breaki, gemy serwisowe, serie i&nbsp;wykres przebiegu meczu.</span><span lang="en">Points, breaks, service games, streaks and a match flow chart.</span></p>
+        <div class="icon c-pink"><svg class="i"><use href="#i-palette"/></svg></div>
+        <h3><span lang="pl">Twoje kolory</span><span lang="en">Your colors</span></h3>
+        <p><span lang="pl">Dziesięć kolorów przycisków osobno dla każdej drużyny, gotowe zestawy i&nbsp;podgląd na żywo. Kolory przechodzą na zegarek.</span><span lang="en">Ten button colors for each team, ready-made sets and a live preview. Colors carry over to the watch.</span></p>
       </article>
       <article class="card reveal">
-        <div class="icon c-orange"><svg class="i"><use href="#i-phone"/></svg></div>
+        <div class="icon c-blue"><svg class="i"><use href="#i-chart"/></svg></div>
+        <h3><span lang="pl">Statystyki i&nbsp;historia</span><span lang="en">Statistics and history</span></h3>
+        <p><span lang="pl">Breaki, serie i&nbsp;wykres przebiegu meczu. Historia z&nbsp;podsumowaniem, filtrem i&nbsp;eksportem do Excela lub Numbers.</span><span lang="en">Breaks, streaks and a match flow chart. A history with a summary, filter and export to Excel or Numbers.</span></p>
+      </article>
+      <article class="card reveal">
+        <div class="icon c-sky"><svg class="i"><use href="#i-phone"/></svg></div>
         <h3><span lang="pl">Wynik na ekranie blokady</span><span lang="en">Score on the Lock Screen</span></h3>
         <p><span lang="pl">Live Activity i&nbsp;Dynamic Island na iPhonie. Zegarek i&nbsp;telefon zawsze pokazują to samo.</span><span lang="en">Live Activity and Dynamic Island on iPhone. Watch and phone always show the same score.</span></p>
       </article>
@@ -196,6 +214,8 @@
       <p><span lang="pl">Od towarzyskiego meczu po turniejowe zasady FIP.</span><span lang="en">From a friendly match to FIP tournament rules.</span></p>
     </div>
     <ul class="chips reveal">
+      <li><span lang="pl">Mecz towarzyski</span><span lang="en">Friendly match</span></li>
+      <li><span lang="pl">Mecz turniejowy</span><span lang="en">Tournament match</span></li>
       <li><span lang="pl">Przewagi (AD)</span><span lang="en">Advantage (AD)</span></li>
       <li>Golden Point</li>
       <li>Star Point <b>FIP 2026</b></li>
@@ -205,6 +225,8 @@
       <li><span lang="pl">Tie-break przy 6:6</span><span lang="en">Tie-break at 6:6</span></li>
       <li><span lang="pl">Rotacja serwisu</span><span lang="en">Serve rotation</span></li>
       <li><span lang="pl">Zmiana stron</span><span lang="en">Change of ends</span></li>
+      <li><span lang="pl">Czas na zmianę stron: 90, 120, 180&nbsp;s</span><span lang="en">Change of ends timer: 90, 120, 180&nbsp;s</span></li>
+      <li><span lang="pl">Break point i&nbsp;piłka meczowa</span><span lang="en">Break and match points</span></li>
     </ul>
   </div>
 </section>
@@ -217,14 +239,34 @@
     </div>
     <div class="gallery">
       <figure class="shot reveal">
-        <div class="frame"><img src="assets/iphone-score-dark.jpg" loading="lazy" width="506" height="1100" alt="Ekran meczu z wynikiem i serwującym"></div>
-        <figcaption><span lang="pl">Mecz</span><span lang="en">Match</span>
-          <span><span lang="pl">Wynik, gemy i&nbsp;serwujący</span><span lang="en">Score, games and server</span></span></figcaption>
+        <div class="frame"><img src="assets/iphone-home.jpg" loading="lazy" width="506" height="1100" alt="Menu startowe PadelScore z trwającym meczem"></div>
+        <figcaption><span lang="pl">Start</span><span lang="en">Start</span>
+          <span><span lang="pl">Mecz, zasady, gracze i&nbsp;historia</span><span lang="en">Match, rules, players and history</span></span></figcaption>
       </figure>
       <figure class="shot reveal">
-        <div class="frame"><img src="assets/iphone-change-ends.jpg" loading="lazy" width="506" height="1100" alt="Przypomnienie o zmianie stron"></div>
+        <div class="frame"><img src="assets/iphone-score.jpg" loading="lazy" width="506" height="1100" alt="Ekran meczu z piłką setową"></div>
+        <figcaption><span lang="pl">Mecz</span><span lang="en">Match</span>
+          <span><span lang="pl">Wynik, serwis i&nbsp;piłka setowa</span><span lang="en">Score, serve and set point</span></span></figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <div class="frame"><img src="assets/iphone-change-ends.jpg" loading="lazy" width="506" height="1100" alt="Odliczanie czasu na zmianę stron"></div>
         <figcaption><span lang="pl">Zmiana stron</span><span lang="en">Change ends</span>
-          <span><span lang="pl">Przypomnienie we właściwym momencie</span><span lang="en">A reminder at the right moment</span></span></figcaption>
+          <span><span lang="pl">Odliczanie czasu na zmianę stron</span><span lang="en">A countdown to change ends</span></span></figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <div class="frame"><img src="assets/iphone-rules.jpg" loading="lazy" width="506" height="1100" alt="Zasady meczu: mecz towarzyski lub turniejowy i czas na zmianę stron"></div>
+        <figcaption><span lang="pl">Zasady</span><span lang="en">Rules</span>
+          <span><span lang="pl">Mecz towarzyski lub turniejowy</span><span lang="en">Friendly or tournament match</span></span></figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <div class="frame"><img src="assets/iphone-history.jpg" loading="lazy" width="506" height="1100" alt="Historia meczów z podsumowaniem i kartami meczów"></div>
+        <figcaption><span lang="pl">Historia</span><span lang="en">History</span>
+          <span><span lang="pl">Podsumowanie, filtr i&nbsp;eksport</span><span lang="en">Summary, filter and export</span></span></figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <div class="frame"><img src="assets/iphone-colors.jpg" loading="lazy" width="506" height="1100" alt="Wybór kolorów przycisków dla obu drużyn"></div>
+        <figcaption><span lang="pl">Kolory</span><span lang="en">Colors</span>
+          <span><span lang="pl">Dziesięć kolorów dla każdej drużyny</span><span lang="en">Ten colors for each team</span></span></figcaption>
       </figure>
       <figure class="shot reveal">
         <div class="frame"><img src="assets/iphone-stats-dark.jpg" loading="lazy" width="506" height="1100" alt="Statystyki meczu i wykres przebiegu"></div>
@@ -249,7 +291,7 @@
     <div class="steps">
       <div class="card step reveal">
         <h3><span lang="pl">Ustaw mecz</span><span lang="en">Set up the match</span></h3>
-        <p><span lang="pl">Wybierz punktację, liczbę setów i&nbsp;opcjonalnie wpisz imiona graczy.</span><span lang="en">Choose the scoring, number of sets and optionally enter player names.</span></p>
+        <p><span lang="pl">Wybierz mecz towarzyski lub turniejowy, punktację i&nbsp;liczbę setów. Opcjonalnie wpisz imiona graczy.</span><span lang="en">Choose a friendly or tournament match, the scoring and the number of sets. Optionally enter player names.</span></p>
       </div>
       <div class="card step reveal">
         <h3><span lang="pl">Graj z&nbsp;zegarkiem</span><span lang="en">Play with your watch</span></h3>
@@ -257,7 +299,7 @@
       </div>
       <div class="card step reveal">
         <h3><span lang="pl">Sprawdź i&nbsp;udostępnij</span><span lang="en">Review and share</span></h3>
-        <p><span lang="pl">Po meczu zobacz statystyki i&nbsp;wyślij grafikę z&nbsp;wynikiem znajomym.</span><span lang="en">After the match, see the statistics and send the result image to your friends.</span></p>
+        <p><span lang="pl">Po meczu zobacz statystyki, a&nbsp;wynik zostaje w&nbsp;Historii. Wyślij znajomym grafikę z&nbsp;wynikiem.</span><span lang="en">After the match, see the statistics; the result stays in your History. Send the result image to your friends.</span></p>
       </div>
     </div>
   </div>
