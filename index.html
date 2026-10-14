@@ -6,25 +6,56 @@
 <title>PadelScore – wynik padla na Apple Watch i iPhonie</title>
 <meta name="title-pl" content="PadelScore – wynik padla na Apple Watch i iPhonie">
 <meta name="title-en" content="PadelScore – padel scoring for Apple Watch and iPhone">
-<meta name="description" content="PadelScore liczy wynik meczu padla na Apple Watch i iPhonie: jedno stuknięcie na punkt, serwis, Golden i Star Point, statystyki i grafika z wynikiem. Bez kont i bez zbierania danych.">
+<meta name="description" content="PadelScore liczy wynik meczu padla na Apple Watch i iPhonie: punkty gestem Double Tap bez dotykania zegarka, serwis, Golden i Star Point, statystyki i grafika z wynikiem. Bez kont i bez zbierania danych.">
+<link rel="canonical" href="https://www.padelscore.pl/">
 <meta property="og:title" content="PadelScore – wynik padla na Apple Watch">
-<meta property="og:description" content="Jedno stuknięcie na punkt. Gemy, sety, tie-breaki i serwis liczą się same.">
+<meta property="og:description" content="Licz punkty gestem Double Tap, bez dotykania zegarka. Gemy, sety, tie-breaki i serwis liczą się same.">
 <meta property="og:image" content="https://www.padelscore.pl/assets/share-card.jpg">
 <meta property="og:url" content="https://www.padelscore.pl/">
 <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0d2a4d">
 <link rel="icon" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="stylesheet" href="assets/site.css">
 <script src="assets/site.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "PadelScore",
+  "operatingSystem": "iOS, watchOS",
+  "applicationCategory": "SportsApplication",
+  "description": "Padel scoring for Apple Watch and iPhone: Double Tap scoring, serve rotation, Golden Point and Star Point, match statistics and a shareable result image.",
+  "url": "https://www.padelscore.pl/",
+  "image": "https://www.padelscore.pl/assets/icon.png",
+  "inLanguage": ["pl", "en", "de", "es", "fr", "it", "ru", "zh-Hans"],
+  "author": { "@type": "Person", "name": "Łukasz Bartosiewicz" }
+}
+</script>
 </head>
 <body>
+<a class="skip" href="#main"><span lang="pl">Przejdź do treści</span><span lang="en">Skip to content</span></a>
+
+<!-- Icons used across the page -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.5"/><circle cx="12" cy="12" r="8.5"/></symbol>
+  <symbol id="i-ball" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6c3.5 3.5 3.5 9.3 0 12.8M18.4 5.6c-3.5 3.5-3.5 9.3 0 12.8"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 20h18M6 16v-4M11 16V6M16 16v-7M21 16v-2"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M10 6h4M9 12h6M9 15h4"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.4 5.2a5.2 5.2 0 0 0-7.4 0L12 6.3l-1-1.1a5.2 5.2 0 0 0-7.4 7.4L12 21l8.4-8.4a5.2 5.2 0 0 0 0-7.4z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.6-3.4 8.4-8 9-4.6-.6-8-4.4-8-9V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-share" viewBox="0 0 24 24"><path d="M12 3v12M7.5 7.5L12 3l4.5 4.5M5 13v5a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3v-5"/></symbol>
+</svg>
 
 <header class="top">
   <div class="wrap">
-    <a class="logo" href="./"><img src="assets/icon.png" alt="">PadelScore</a>
+    <a class="logo" href="./"><img src="assets/icon.png" alt="" width="32" height="32">PadelScore</a>
     <nav aria-label="Menu">
       <a class="hide-sm" href="#funkcje"><span lang="pl">Funkcje</span><span lang="en">Features</span></a>
+      <a class="hide-sm" href="#double-tap">Double Tap</a>
       <a class="hide-sm" href="support/"><span lang="pl">Pomoc</span><span lang="en">Support</span></a>
       <a class="hide-sm" href="privacy/"><span lang="pl">Prywatność</span><span lang="en">Privacy</span></a>
       <div class="langs" role="group" aria-label="Język / Language">
@@ -35,37 +66,43 @@
   </div>
 </header>
 
-<main>
-<section class="hero" style="padding:0">
+<main id="main">
+<div class="hero dark">
   <div class="wrap">
     <div>
-      <span class="eyebrow">● Apple Watch + iPhone</span>
+      <span class="eyebrow">Apple Watch + iPhone</span>
       <h1>
-        <span lang="pl">Licz wynik padla jednym stuknięciem.</span>
-        <span lang="en">Keep padel score with one tap.</span>
+        <span lang="pl">Licz wynik padla bez odrywania się od gry.</span>
+        <span lang="en">Keep padel score without leaving the game.</span>
       </h1>
       <p class="lead">
-        <span lang="pl">Gemy, sety, tie-breaki i&nbsp;serwis liczą się same. Ty skupiasz się na grze.</span>
-        <span lang="en">Games, sets, tie-breaks and serve are counted for you. You focus on the game.</span>
+        <span lang="pl">Punkt to jedno stuknięcie albo gest dłonią. Gemy, sety, tie-breaki i&nbsp;serwis liczą się same.</span>
+        <span lang="en">A point is one tap or a hand gesture. Games, sets, tie-breaks and serve are counted for you.</span>
       </p>
       <div class="cta">
-        <span class="btn primary" aria-disabled="true">
-          <svg width="18" height="22" viewBox="0 0 17 21" aria-hidden="true"><path fill="currentColor" d="M14.1 11.2c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.7-1-2.7-4.1zM11.6 3.6c.7-.9 1.2-2.1 1-3.3-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.2 1.2.1 2.3-.6 3.1-1.5z"/></svg>
-          <span lang="pl">Wkrótce w App Store</span><span lang="en">Coming soon to the App Store</span>
+        <span class="store" aria-label="Wkrótce w App Store / Coming soon to the App Store">
+          <svg width="22" height="26" viewBox="0 0 17 21" aria-hidden="true"><path fill="currentColor" d="M14.1 11.2c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.7-1-2.7-4.1zM11.6 3.6c.7-.9 1.2-2.1 1-3.3-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.2 1.2.1 2.3-.6 3.1-1.5z"/></svg>
+          <span><small><span lang="pl">Wkrótce w</span><span lang="en">Coming soon to the</span></small><strong>App Store</strong></span>
         </span>
-        <a class="btn ghost" href="#funkcje"><span lang="pl">Zobacz funkcje</span><span lang="en">See features</span></a>
+        <a class="btn primary" href="#double-tap"><span lang="pl">Zobacz, jak to działa</span><span lang="en">See how it works</span></a>
       </div>
-      <p class="soon">
+      <ul class="trust">
+        <li><svg class="i"><use href="#i-check"/></svg><span lang="pl">Bez konta</span><span lang="en">No account</span></li>
+        <li><svg class="i"><use href="#i-check"/></svg><span lang="pl">Bez reklam</span><span lang="en">No ads</span></li>
+        <li><svg class="i"><use href="#i-check"/></svg><span lang="pl">Działa bez internetu</span><span lang="en">Works offline</span></li>
+        <li><svg class="i"><use href="#i-check"/></svg><span lang="pl">8 języków</span><span lang="en">8 languages</span></li>
+      </ul>
+      <p class="req">
         <span lang="pl">Wymaga iPhone'a z&nbsp;iOS 26.5 i&nbsp;Apple&nbsp;Watch z&nbsp;watchOS 26.5 lub nowszym.</span>
         <span lang="en">Requires iPhone with iOS 26.5 and Apple&nbsp;Watch with watchOS 26.5 or later.</span>
       </p>
     </div>
     <div class="devices">
       <div class="phone"><img src="assets/iphone-score-dark.jpg" width="506" height="1100" alt="Ekran meczu w PadelScore na iPhonie: Anna / Adam 30, Kasia / Ewa 15, gemy 2:1"></div>
-      <div class="watch"><img src="assets/watch-score.png" width="422" height="514" alt="PadelScore na Apple Watch: wynik 30:15"></div>
+      <div class="watch"><img src="assets/watch-score.png" width="422" height="514" alt="PadelScore na Apple Watch: wynik i przycisk Double Tap"></div>
     </div>
   </div>
-</section>
+</div>
 
 <section id="funkcje">
   <div class="wrap">
@@ -76,32 +113,32 @@
     </div>
     <div class="grid">
       <article class="card">
-        <div class="icon" aria-hidden="true">👆</div>
+        <div class="icon"><svg class="i"><use href="#i-target"/></svg></div>
         <h3><span lang="pl">Jedno stuknięcie na punkt</span><span lang="en">One tap per point</span></h3>
-        <p><span lang="pl">Duże przyciski drużyn na zegarku. Pomyłkę cofasz jednym przyciskiem.</span><span lang="en">Big team buttons on your watch. Undo any mistake with one button.</span></p>
+        <p><span lang="pl">Duże przyciski drużyn na zegarku, a&nbsp;gestem Double Tap bez dotykania ekranu. Pomyłkę cofasz jednym przyciskiem.</span><span lang="en">Big team buttons on your watch, or Double Tap without touching the screen. Undo any mistake with one button.</span></p>
       </article>
       <article class="card">
-        <div class="icon" aria-hidden="true">🎾</div>
+        <div class="icon"><svg class="i"><use href="#i-ball"/></svg></div>
         <h3><span lang="pl">Kto serwuje i&nbsp;skąd</span><span lang="en">Who serves, and from where</span></h3>
         <p><span lang="pl">Rotacja serwisu z&nbsp;imionami graczy, strona serwisu i&nbsp;przypomnienie o&nbsp;zmianie stron.</span><span lang="en">Serve rotation with player names, the serving side and a change-of-ends reminder.</span></p>
       </article>
       <article class="card">
-        <div class="icon" aria-hidden="true">⭐</div>
+        <div class="icon"><svg class="i"><use href="#i-star"/></svg></div>
         <h3><span lang="pl">Twój format meczu</span><span lang="en">Your match format</span></h3>
         <p><span lang="pl">Przewagi, Golden Point lub Star Point (FIP&nbsp;2026). 1, 3 lub 5 setów, krótkie sety i&nbsp;super tie-break.</span><span lang="en">Advantage, Golden Point or Star Point (FIP&nbsp;2026). 1, 3 or 5 sets, short sets and super tie-break.</span></p>
       </article>
       <article class="card">
-        <div class="icon" aria-hidden="true">📊</div>
+        <div class="icon"><svg class="i"><use href="#i-chart"/></svg></div>
         <h3><span lang="pl">Statystyki meczu</span><span lang="en">Match statistics</span></h3>
         <p><span lang="pl">Punkty, breaki, gemy serwisowe, serie i&nbsp;wykres przebiegu meczu.</span><span lang="en">Points, breaks, service games, streaks and a match flow chart.</span></p>
       </article>
       <article class="card">
-        <div class="icon" aria-hidden="true">📲</div>
+        <div class="icon"><svg class="i"><use href="#i-phone"/></svg></div>
         <h3><span lang="pl">Wynik na ekranie blokady</span><span lang="en">Score on the Lock Screen</span></h3>
         <p><span lang="pl">Live Activity i&nbsp;Dynamic Island na iPhonie. Zegarek i&nbsp;telefon zawsze pokazują to samo.</span><span lang="en">Live Activity and Dynamic Island on iPhone. Watch and phone always show the same score.</span></p>
       </article>
       <article class="card">
-        <div class="icon" aria-hidden="true">❤️</div>
+        <div class="icon"><svg class="i"><use href="#i-heart"/></svg></div>
         <h3><span lang="pl">Trening w&nbsp;Zdrowiu</span><span lang="en">Workout in Health</span></h3>
         <p><span lang="pl">Opcjonalnie zapisz mecz jako trening: tętno i&nbsp;kalorie w&nbsp;historii meczów.</span><span lang="en">Optionally save the match as a workout, with heart rate and calories in your history.</span></p>
       </article>
@@ -109,7 +146,70 @@
   </div>
 </section>
 
-<section style="padding-top:0">
+<section id="double-tap" class="gesture dark">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Double Tap</span>
+      <h2>
+        <span lang="pl">Graj z&nbsp;rakietą w&nbsp;dłoni. Licz punkty gestem.</span>
+        <span lang="en">Keep the racket in your hand. Score with a gesture.</span>
+      </h2>
+      <p class="lead">
+        <span lang="pl">Stuknij palcem wskazującym o&nbsp;kciuk dłoni z&nbsp;zegarkiem. Nie musisz dotykać ekranu ani na niego patrzeć.</span>
+        <span lang="en">Tap your index finger and thumb together on the hand with the watch. No need to touch or even look at the screen.</span>
+      </p>
+      <ul class="taps">
+        <li>
+          <span class="count" aria-hidden="true"><span>1×</span></span>
+          <span><strong><span class="dot green"></span><span lang="pl">Punkt dla Twojej drużyny</span><span lang="en">Point for your team</span></strong>
+            <small><span lang="pl">Jeden gest Double Tap.</span><span lang="en">One Double Tap.</span></small></span>
+        </li>
+        <li>
+          <span class="count" aria-hidden="true"><span>2×</span></span>
+          <span><strong><span class="dot red"></span><span lang="pl">Punkt dla rywali</span><span lang="en">Point for the opponents</span></strong>
+            <small><span lang="pl">Dwa gesty pod rząd.</span><span lang="en">Two gestures in a row.</span></small></span>
+        </li>
+      </ul>
+      <p class="note">
+        <span lang="pl">Różne wibracje potwierdzają, komu przybył punkt. Czas na drugi gest ustawisz w&nbsp;menu zegarka. Wymaga Apple&nbsp;Watch Series&nbsp;9 lub Ultra&nbsp;2 albo nowszego.</span>
+        <span lang="en">Distinct haptics confirm who got the point. Set the time for the second gesture in the watch menu. Requires Apple&nbsp;Watch Series&nbsp;9 or Ultra&nbsp;2 or later.</span>
+      </p>
+    </div>
+    <div class="watches">
+      <figure>
+        <div class="watch"><img src="assets/watch-score.png" loading="lazy" width="422" height="514" alt="Ekran wyniku z przyciskiem Double Tap"></div>
+        <figcaption><span lang="pl">Gotowy na gest</span><span lang="en">Ready for a gesture</span></figcaption>
+      </figure>
+      <figure>
+        <div class="watch"><img src="assets/watch-doubletap.png" loading="lazy" width="422" height="514" alt="Żółty przycisk: zegarek czeka na drugi gest"></div>
+        <figcaption><span lang="pl">Czeka na drugi gest</span><span lang="en">Waiting for a second gesture</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow"><span lang="pl">Formaty i&nbsp;zasady</span><span lang="en">Formats and rules</span></span>
+      <h2><span lang="pl">Gracie po swojemu</span><span lang="en">Play your way</span></h2>
+      <p><span lang="pl">Od towarzyskiego meczu po turniejowe zasady FIP.</span><span lang="en">From a friendly match to FIP tournament rules.</span></p>
+    </div>
+    <ul class="chips">
+      <li><span lang="pl">Przewagi (AD)</span><span lang="en">Advantage (AD)</span></li>
+      <li>Golden Point</li>
+      <li>Star Point <b>FIP 2026</b></li>
+      <li><span lang="pl">1, 3 lub 5 setów</span><span lang="en">1, 3 or 5 sets</span></li>
+      <li><span lang="pl">Krótkie sety do 4</span><span lang="en">Short sets to 4</span></li>
+      <li><span lang="pl">Super tie-break do 10</span><span lang="en">Super tie-break to 10</span></li>
+      <li><span lang="pl">Tie-break przy 6:6</span><span lang="en">Tie-break at 6:6</span></li>
+      <li><span lang="pl">Rotacja serwisu</span><span lang="en">Serve rotation</span></li>
+      <li><span lang="pl">Zmiana stron</span><span lang="en">Change of ends</span></li>
+    </ul>
+  </div>
+</section>
+
+<section>
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow"><span lang="pl">Zobacz aplikację</span><span lang="en">Take a look</span></span>
@@ -140,7 +240,7 @@
   </div>
 </section>
 
-<section style="padding-top:0">
+<section class="alt">
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow"><span lang="pl">Jak to działa</span><span lang="en">How it works</span></span>
@@ -153,7 +253,7 @@
       </div>
       <div class="card step">
         <h3><span lang="pl">Graj z&nbsp;zegarkiem</span><span lang="en">Play with your watch</span></h3>
-        <p><span lang="pl">Po każdej wymianie stuknij drużynę, która wygrała punkt. iPhone może zostać w&nbsp;torbie.</span><span lang="en">After each rally, tap the team that won the point. Your iPhone can stay in your bag.</span></p>
+        <p><span lang="pl">Po każdej wymianie stuknij drużynę albo użyj gestu Double Tap. iPhone może zostać w&nbsp;torbie.</span><span lang="en">After each rally, tap the team or use Double Tap. Your iPhone can stay in your bag.</span></p>
       </div>
       <div class="card step">
         <h3><span lang="pl">Sprawdź i&nbsp;udostępnij</span><span lang="en">Review and share</span></h3>
@@ -163,10 +263,10 @@
   </div>
 </section>
 
-<section style="padding-top:0">
+<section>
   <div class="wrap">
-    <div class="band">
-      <div class="shield" aria-hidden="true">🔒</div>
+    <div class="band dark">
+      <div class="shield"><svg class="i"><use href="#i-shield"/></svg></div>
       <div>
         <h2><span lang="pl">Twoje dane zostają u&nbsp;Ciebie</span><span lang="en">Your data stays with you</span></h2>
         <p><span lang="pl">Bez konta, bez serwerów, bez reklam i&nbsp;bez śledzenia. PadelScore nie zbiera żadnych danych.</span><span lang="en">No account, no servers, no ads and no tracking. PadelScore does not collect any data.</span></p>
