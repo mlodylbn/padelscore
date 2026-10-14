@@ -219,3 +219,36 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: 
 footer nav { display: flex; gap: 20px; flex-wrap: wrap; }
 footer a { text-decoration: none; }
 footer a:hover { text-decoration: underline; }
+
+/* ---------- Illustrations and color ---------- */
+
+/* Colorful feature icons */
+.card .icon.c-green  { background: linear-gradient(135deg, #34c759, #0f9d58); color: #fff; }
+.card .icon.c-yellow { background: linear-gradient(135deg, #ffd400, #ff9f0a); color: #3a2a00; }
+.card .icon.c-violet { background: linear-gradient(135deg, #a78bfa, #6d28d9); color: #fff; }
+.card .icon.c-blue   { background: linear-gradient(135deg, #38bdf8, #1d4ed8); color: #fff; }
+.card .icon.c-orange { background: linear-gradient(135deg, #fb923c, #ea580c); color: #fff; }
+.card .icon.c-red    { background: linear-gradient(135deg, #fb7185, #e11d48); color: #fff; }
+.card { transition: transform .25s ease, box-shadow .25s ease; }
+.card:hover { transform: translateY(-3px); box-shadow: 0 2px 4px rgba(13,42,77,.06), 0 18px 40px rgba(13,42,77,.12); }
+
+/* Formats section: soft court colors */
+.formats { background:
+  radial-gradient(600px 300px at 10% 0%, rgba(47, 128, 255, .16), transparent 70%),
+  radial-gradient(600px 300px at 90% 100%, rgba(255, 212, 0, .18), transparent 70%),
+  var(--bg-alt); }
+.chips li:nth-child(3n+1) { border-color: rgba(47, 128, 255, .35); }
+.chips li:nth-child(3n+2) { border-color: rgba(52, 199, 89, .35); }
+.chips li:nth-child(3n)   { border-color: rgba(255, 159, 10, .4); }
+
+/* Reveal on scroll (only with JavaScript and when motion is welcome) */
+@media (prefers-reduced-motion: no-preference) {
+  html.reveal-ready .reveal { opacity: 0; transform: translateY(26px);
+                              transition: opacity .7s ease, transform .7s cubic-bezier(.2, .7, .2, 1); }
+  html.reveal-ready .reveal.visible { opacity: 1; transform: none; }
+  html.reveal-ready .grid .reveal:nth-child(3n+2), html.reveal-ready .gallery .reveal:nth-child(2),
+  html.reveal-ready .steps .reveal:nth-child(2) { transition-delay: .08s; }
+  html.reveal-ready .grid .reveal:nth-child(3n), html.reveal-ready .gallery .reveal:nth-child(3),
+  html.reveal-ready .steps .reveal:nth-child(3) { transition-delay: .16s; }
+  html.reveal-ready .gallery .reveal:nth-child(4) { transition-delay: .24s; }
+}

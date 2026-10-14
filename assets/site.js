@@ -33,3 +33,22 @@
     if (year) year.textContent = String(new Date().getFullYear());
   });
 })();
+
+// Sections slide in as they come into view, unless the system asks for reduced motion.
+(function () {
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !('IntersectionObserver' in window)) return;
+  document.documentElement.classList.add('reveal-ready');
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(function (el) { observer.observe(el); });
+  });
+})();
