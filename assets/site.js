@@ -14,6 +14,13 @@
     });
     var title = document.querySelector('meta[name="title-' + lang + '"]');
     if (title) document.title = title.content;
+    // Screenshots show the app in the page language.
+    document.querySelectorAll('img[data-en]').forEach(function (img) {
+      if (!img.dataset.pl) { img.dataset.pl = img.getAttribute('src'); img.dataset.altPl = img.alt; }
+      var en = lang === 'en';
+      img.setAttribute('src', en ? img.dataset.en : img.dataset.pl);
+      img.alt = en ? img.dataset.altEn : img.dataset.altPl;
+    });
   }
 
   var hash = location.hash.slice(1);
