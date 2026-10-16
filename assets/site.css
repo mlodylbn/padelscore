@@ -255,3 +255,7 @@ footer a:hover { text-decoration: underline; }
   html.reveal-ready .steps .reveal:nth-child(3) { transition-delay: .16s; }
   html.reveal-ready .gallery .reveal:nth-child(4n) { transition-delay: .24s; }
 }
+
+/* Tapazo logo above the hero headline */
+.hero-logo { display: block; width: min(320px, 78%); height: auto; margin: -8px 0 10px -10px; }
+@media (max-width: 900px) { .hero-logo { margin: 0 auto 8px; } }
