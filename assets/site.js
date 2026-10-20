@@ -8,6 +8,7 @@
 
   function show(lang) {
     root.classList.toggle('en', lang === 'en');
+    root.classList.toggle('es', lang === 'es');
     root.lang = lang;
     document.querySelectorAll('.langs button').forEach(function (b) {
       b.setAttribute('aria-pressed', String(b.dataset.lang === lang));
@@ -17,15 +18,21 @@
     // Screenshots show the app in the page language.
     document.querySelectorAll('img[data-en]').forEach(function (img) {
       if (!img.dataset.pl) { img.dataset.pl = img.getAttribute('src'); img.dataset.altPl = img.alt; }
-      var en = lang === 'en';
-      img.setAttribute('src', en ? img.dataset.en : img.dataset.pl);
-      img.alt = en ? img.dataset.altEn : img.dataset.altPl;
+      var key = lang === 'en' ? 'en' : lang === 'es' && img.dataset.es ? 'es' : 'pl';
+      var alt = key === 'en' ? img.dataset.altEn : key === 'es' ? img.dataset.altEs : img.dataset.altPl;
+      img.setAttribute('src', img.dataset[key]);
+      img.alt = alt;
     });
   }
 
   var hash = location.hash.slice(1);
-  var initial = (hash === 'en' || hash === 'pl') ? hash
-    : stored() || ((navigator.language || 'pl').toLowerCase().indexOf('pl') === 0 ? 'pl' : 'en');
+  var known = ['pl', 'en', 'es'];
+  // Polish and Spanish browsers get their language, everyone else English.
+  var browser = (navigator.language || 'pl').toLowerCase().slice(0, 2);
+  var saved = stored();
+  var initial = known.indexOf(hash) >= 0 ? hash
+    : known.indexOf(saved) >= 0 ? saved
+    : known.indexOf(browser) >= 0 ? browser : 'en';
   show(initial);
 
   document.addEventListener('DOMContentLoaded', function () {

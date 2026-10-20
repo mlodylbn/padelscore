@@ -38,9 +38,11 @@ a { color: inherit; text-underline-offset: 3px; }
         padding: 8px 14px; border-radius: 10px; font-weight: 700; }
 .skip:focus { left: 12px; }
 
-/* Both languages are in the page. Without JavaScript only Polish is shown. */
-html:not(.en) [lang="en"]:not(html) { display: none !important; }
-html.en [lang="pl"]:not(html) { display: none !important; }
+/* All languages are in the page. Without JavaScript only Polish is shown. */
+html:not(.en) [lang="en"]:not(html),
+html:not(.es) [lang="es"]:not(html),
+html.en [lang="pl"]:not(html),
+html.es [lang="pl"]:not(html) { display: none !important; }
 
 /* Icons */
 .i { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: none; }
