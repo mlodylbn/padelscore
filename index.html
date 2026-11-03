@@ -7,7 +7,7 @@
 <meta name="title-pl" content="Tapazo – wynik padla na Apple Watch i iPhonie">
 <meta name="title-en" content="Tapazo – padel scoring for Apple Watch and iPhone">
 <meta name="title-es" content="Tapazo – marcador de pádel para Apple Watch y iPhone">
-<meta name="description" content="Tapazo liczy wynik meczu padla na Apple Watch i iPhonie: punkty gestem Double Tap, mecz towarzyski, turniejowy lub Americano, break pointy i piłki meczowe, profil gracza, wspólny mecz ze znajomymi, historia i statystyki. Bez kont i bez zbierania danych.">
+<meta name="description" content="Tapazo liczy wynik meczu padla na Apple Watch i iPhonie: punkty gestem Double Tap, mecz towarzyski, turniejowy lub Americano, break pointy i piłki meczowe, kluby padlowe w pobliżu, wynik ogłaszany na głos, profil gracza, wspólny mecz ze znajomymi, historia i statystyki. Bez kont i bez zbierania danych.">
 <link rel="canonical" href="https://www.tapazopadelscore.pl/">
 <meta property="og:title" content="Tapazo – wynik padla na Apple Watch">
 <meta property="og:description" content="Licz punkty gestem Double Tap, bez dotykania zegarka. Gemy, sety, tie-breaki, serwis i zmiana stron liczą się same.">
@@ -37,7 +37,7 @@
   "alternateName": ["Tapazo Padel", "Tapazo: Padel Score", "PadelScore"],
   "operatingSystem": "iOS, watchOS",
   "applicationCategory": "SportsApplication",
-  "description": "Padel scoring for Apple Watch and iPhone: Double Tap scoring, serve rotation, friendly, tournament and Americano matches, break and match points, a change of ends timer, player profile, matches with friends nearby, history, statistics and a shareable result image.",
+  "description": "Padel scoring for Apple Watch and iPhone: Double Tap scoring, serve rotation, friendly, tournament and Americano matches, break and match points, a change of ends timer, padel clubs nearby, the score called out loud, a courtside scoreboard, Apple Health workouts, player profile, matches with friends nearby, history, statistics and a shareable result image.",
   "url": "https://www.tapazopadelscore.pl/",
   "image": "https://www.tapazopadelscore.pl/assets/icon.png",
   "inLanguage": ["pl", "en", "de", "es", "fr", "it", "ru", "zh-Hans"],
@@ -64,6 +64,9 @@
   <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20.5c1.3-4 4.4-6 8-6s6.7 2 8 6"/></symbol>
   <symbol id="i-wave" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M8 8a5.7 5.7 0 0 0 0 8M16 8a5.7 5.7 0 0 1 0 8M5 5a10 10 0 0 0 0 14M19 5a10 10 0 0 1 0 14"/></symbol>
   <symbol id="i-hash" viewBox="0 0 24 24"><path d="M9 3.5L7 20.5M17 3.5l-2 17M4 9h17M3 15h17"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="i-sound" viewBox="0 0 24 24"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M15.5 9a4.2 4.2 0 0 1 0 6M18.5 6.5a8 8 0 0 1 0 11"/></symbol>
+  <symbol id="i-board" viewBox="0 0 24 24"><rect x="2.5" y="6" width="19" height="12" rx="2.5"/><path d="M12 6v12M7 10.5v3M17 10.5v3"/></symbol>
   <symbol id="i-palette" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18c1.4 0 2-.9 2-1.9 0-1.4-1.2-1.7-1.2-3 0-1 .8-1.6 1.9-1.6H17a4 4 0 0 0 4-4C21 6.4 17 3 12 3z"/><circle cx="7.5" cy="11.5" r="1.2"/><circle cx="10" cy="7.5" r="1.2"/><circle cx="14.5" cy="7.5" r="1.2"/></symbol>
 </svg>
 
@@ -134,12 +137,12 @@
       <article class="card reveal">
         <div class="icon c-green"><svg class="i"><use href="#i-target"/></svg></div>
         <h3><span lang="pl">Jedno stuknięcie na punkt</span><span lang="en">One tap per point</span><span lang="es">Un toque por punto</span></h3>
-        <p><span lang="pl">Duże przyciski drużyn na zegarku, a&nbsp;gestem Double Tap bez dotykania ekranu. Pomyłkę cofasz jednym przyciskiem.</span><span lang="en">Big team buttons on your watch, or Double Tap without touching the screen. Undo any mistake with one button.</span><span lang="es">Botones grandes de cada equipo en el reloj, o el doble toque sin tocar la pantalla. Deshaz cualquier error con un botón.</span></p>
+        <p><span lang="pl">Duże przyciski drużyn na zegarku, gest Double Tap bez dotykania ekranu, a&nbsp;na Apple&nbsp;Watch Ultra przycisk Czynności. Pomyłkę cofasz jednym przyciskiem.</span><span lang="en">Big team buttons on your watch, Double Tap without touching the screen, and the Action button on Apple&nbsp;Watch Ultra. Undo any mistake with one button.</span><span lang="es">Botones grandes de cada equipo en el reloj, el doble toque sin tocar la pantalla y el botón de acción en el Apple&nbsp;Watch Ultra. Deshaz cualquier error con un botón.</span></p>
       </article>
       <article class="card reveal">
         <div class="icon c-yellow"><svg class="i"><use href="#i-ball"/></svg></div>
         <h3><span lang="pl">Kto serwuje i&nbsp;skąd</span><span lang="en">Who serves, and from where</span><span lang="es">Quién saca y desde dónde</span></h3>
-        <p><span lang="pl">Przed meczem wybierasz, kto serwuje. Potem aplikacja sama pilnuje rotacji serwisu, imion graczy i&nbsp;strony serwisu.</span><span lang="en">Pick who serves before the match. The app then follows the serve rotation, player names and serving side for you.</span><span lang="es">Elige quién saca antes del partido. La app sigue por ti la rotación del saque, los nombres de los jugadores y el lado de saque.</span></p>
+        <p><span lang="pl">Przed meczem wybierasz, kto serwuje, także jednym stuknięciem w&nbsp;„Kto serwuje?” na zegarku. Potem aplikacja sama pilnuje rotacji serwisu, imion graczy i&nbsp;strony serwisu.</span><span lang="en">Pick who serves before the match, also with one tap on "Who serves?" on the watch. The app then follows the serve rotation, player names and serving side for you.</span><span lang="es">Elige quién saca antes del partido, también con un toque en «¿Quién saca?» en el reloj. La app sigue por ti la rotación del saque, los nombres de los jugadores y el lado de saque.</span></p>
       </article>
       <article class="card reveal">
         <div class="icon c-teal"><svg class="i"><use href="#i-medal"/></svg></div>
@@ -155,6 +158,21 @@
         <div class="icon c-teal"><svg class="i"><use href="#i-wave"/></svg></div>
         <h3><span lang="pl">Mecz ze znajomymi w&nbsp;pobliżu</span><span lang="en">Play with friends nearby</span><span lang="es">Juega con amigos cercanos</span></h3>
         <p><span lang="pl">Znajomi z&nbsp;Tapazo na korcie pojawiają się na ekranie „Nowy mecz”. Dodaj ich do drużyny, a&nbsp;wynik zobaczą na swoim iPhonie i&nbsp;zegarku. Mecz trafi też do ich historii. Bez internetu.</span><span lang="en">Friends with Tapazo on court appear on the New match screen. Add them to a team and they see the score on their iPhone and watch. The match goes into their history too. No internet needed.</span><span lang="es">Los amigos con Tapazo en la pista aparecen en la pantalla Nuevo partido. Añádelos a un equipo y verán el marcador en su iPhone y su reloj. El partido también se guarda en su historial. Sin internet.</span></p>
+      </article>
+      <article class="card reveal">
+        <div class="icon c-teal"><svg class="i"><use href="#i-pin"/></svg></div>
+        <h3><span lang="pl">Kluby padlowe w&nbsp;pobliżu</span><span lang="en">Padel clubs nearby</span><span lang="es">Clubes de pádel cercanos</span></h3>
+        <p><span lang="pl">Mapa i&nbsp;lista klubów do 10, 25 lub 50&nbsp;km z&nbsp;Apple Maps, z&nbsp;dojazdem, telefonem i&nbsp;stroną klubu. Klub zapisuje się z&nbsp;meczem i&nbsp;trafia na grafikę z&nbsp;wynikiem.</span><span lang="en">A map and list of clubs within 10, 25 or 50&nbsp;km from Apple Maps, with directions, phone and website. The club is saved with the match and shown on the result image.</span><span lang="es">Mapa y lista de clubes a 10, 25 o 50&nbsp;km desde Apple Maps, con cómo llegar, teléfono y web. El club se guarda con el partido y aparece en la imagen del resultado.</span></p>
+      </article>
+      <article class="card reveal">
+        <div class="icon c-orange"><svg class="i"><use href="#i-sound"/></svg></div>
+        <h3><span lang="pl">Wynik na głos</span><span lang="en">Score called out loud</span><span lang="es">Marcador en voz alta</span></h3>
+        <p><span lang="pl">Po każdym punkcie aplikacja ogłasza wynik jak sędzia: przez głośnik iPhone'a dla całej czwórki albo w&nbsp;słuchawkach.</span><span lang="en">After every point the app calls the score like an umpire: on the iPhone speaker for all four players, or in your headphones.</span><span lang="es">Tras cada punto, la app canta el marcador como un árbitro: por el altavoz del iPhone para los cuatro o en tus auriculares.</span></p>
+      </article>
+      <article class="card reveal">
+        <div class="icon c-blue"><svg class="i"><use href="#i-board"/></svg></div>
+        <h3><span lang="pl">Tablica przy korcie</span><span lang="en">Courtside scoreboard</span><span lang="es">Marcador a pie de pista</span></h3>
+        <p><span lang="pl">Obróć iPhone'a poziomo, a&nbsp;zamieni się w&nbsp;tablicę z&nbsp;wielkimi cyframi, czytelną dla wszystkich graczy. Strony zamienisz jak na korcie.</span><span lang="en">Turn your iPhone sideways for a scoreboard with huge numbers that every player can read. Swap sides to match the court.</span><span lang="es">Gira el iPhone en horizontal y se convierte en un marcador con números enormes que todos pueden leer. Cambia los lados como en la pista.</span></p>
       </article>
       <article class="card reveal">
         <div class="icon c-pink"><svg class="i"><use href="#i-user"/></svg></div>
@@ -183,13 +201,13 @@
       </article>
       <article class="card reveal">
         <div class="icon c-sky"><svg class="i"><use href="#i-phone"/></svg></div>
-        <h3><span lang="pl">Wynik na ekranie blokady</span><span lang="en">Score on the Lock Screen</span><span lang="es">Marcador en la pantalla de bloqueo</span></h3>
-        <p><span lang="pl">Live Activity i&nbsp;Dynamic Island na iPhonie. Zegarek i&nbsp;telefon zawsze pokazują to samo.</span><span lang="en">Live Activity and Dynamic Island on iPhone. Watch and phone always show the same score.</span><span lang="es">Actividad en directo y Dynamic Island en el iPhone. El reloj y el teléfono muestran siempre el mismo marcador.</span></p>
+        <h3><span lang="pl">Wynik zawsze na widoku</span><span lang="en">The score always in sight</span><span lang="es">El marcador siempre a la vista</span></h3>
+        <p><span lang="pl">Ekran blokady i&nbsp;Dynamic Island na iPhonie, wynik na tarczy zegarka. Zegarek i&nbsp;telefon zawsze pokazują to samo.</span><span lang="en">Lock Screen and Dynamic Island on iPhone, and the score on your watch face. Watch and phone always show the same score.</span><span lang="es">Pantalla de bloqueo y Dynamic Island en el iPhone, y el marcador en la esfera del reloj. El reloj y el teléfono muestran siempre lo mismo.</span></p>
       </article>
       <article class="card reveal">
         <div class="icon c-red"><svg class="i"><use href="#i-heart"/></svg></div>
-        <h3><span lang="pl">Trening w&nbsp;Zdrowiu</span><span lang="en">Workout in Health</span><span lang="es">Entrenamiento en Salud</span></h3>
-        <p><span lang="pl">Opcjonalnie zapisz mecz jako trening: tętno i&nbsp;kalorie w&nbsp;historii meczów.</span><span lang="en">Optionally save the match as a workout, with heart rate and calories in your history.</span><span lang="es">Si quieres, guarda el partido como entrenamiento, con frecuencia cardiaca y calorías en tu historial.</span></p>
+        <h3><span lang="pl">Trening w&nbsp;aplikacji Zdrowie</span><span lang="en">Workout in Apple Health</span><span lang="es">Entrenamiento en Salud</span></h3>
+        <p><span lang="pl">Zegarek zapisuje mecz jako trening w&nbsp;aplikacji Zdrowie, a&nbsp;tętno i&nbsp;kalorie pokazuje w&nbsp;historii. Przełącznik „Zapisuj mecze w&nbsp;Zdrowiu” w&nbsp;ustawieniach.</span><span lang="en">The watch saves the match as a workout in the Health app, with heart rate and calories in your history. Turn it on or off with "Save matches in Health".</span><span lang="es">El reloj guarda el partido como entrenamiento en la app Salud, con frecuencia cardiaca y calorías en tu historial. Actívalo o desactívalo con «Guardar partidos en Salud».</span></p>
       </article>
     </div>
   </div>
@@ -273,12 +291,17 @@
       <figure class="shot reveal">
         <div class="frame"><img src="assets/iphone-home.jpg" loading="lazy" width="506" height="1100" alt="Menu startowe Tapazo z trwającym meczem" data-en="assets/en/iphone-home.jpg" data-alt-en="Tapazo home screen with a match in progress" data-es="assets/es/iphone-home.jpg" data-alt-es="Pantalla de inicio de Tapazo con un partido en curso"></div>
         <figcaption><span lang="pl">Start</span><span lang="en">Start</span><span lang="es">Inicio</span>
-          <span><span lang="pl">Mecz, profil, historia i&nbsp;ustawienia</span><span lang="en">Match, profile, history and settings</span><span lang="es">Partido, perfil, historial y ajustes</span></span></figcaption>
+          <span><span lang="pl">Mecz, profil, historia i&nbsp;kluby</span><span lang="en">Match, profile, history and clubs</span><span lang="es">Partido, perfil, historial y clubes</span></span></figcaption>
       </figure>
       <figure class="shot reveal">
         <div class="frame"><img src="assets/iphone-score.jpg" loading="lazy" width="506" height="1100" alt="Ekran meczu z piłką setową" data-en="assets/en/iphone-score.jpg" data-alt-en="Match screen with a set point" data-es="assets/es/iphone-score.jpg" data-alt-es="Pantalla del partido con bola de set"></div>
         <figcaption><span lang="pl">Mecz</span><span lang="en">Match</span><span lang="es">Partido</span>
           <span><span lang="pl">Wynik, serwis i&nbsp;piłka setowa</span><span lang="en">Score, serve and set point</span><span lang="es">Marcador, saque y bola de set</span></span></figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <div class="frame"><img src="assets/iphone-clubs.jpg" loading="lazy" width="506" height="1100" alt="Kluby padlowe w pobliżu na mapie i liście, do 50 km" data-en="assets/en/iphone-clubs.jpg" data-alt-en="Padel clubs nearby on a map and a list, up to 50 km" data-es="assets/es/iphone-clubs.jpg" data-alt-es="Clubes de pádel cercanos en un mapa y una lista, hasta 50 km"></div>
+        <figcaption><span lang="pl">Kluby</span><span lang="en">Clubs</span><span lang="es">Clubes</span>
+          <span><span lang="pl">Kluby padlowe w&nbsp;pobliżu na mapie</span><span lang="en">Padel clubs nearby on a map</span><span lang="es">Clubes de pádel cercanos en un mapa</span></span></figcaption>
       </figure>
       <figure class="shot reveal">
         <div class="frame"><img src="assets/iphone-change-ends.jpg" loading="lazy" width="506" height="1100" alt="Odliczanie czasu na zmianę stron" data-en="assets/en/iphone-change-ends.jpg" data-alt-en="Change of ends countdown" data-es="assets/es/iphone-change-ends.jpg" data-alt-es="Cuenta atrás del cambio de lado"></div>
@@ -291,9 +314,9 @@
           <span><span lang="pl">Drużyny, gracze w&nbsp;pobliżu i&nbsp;serwis</span><span lang="en">Teams, players nearby and serve</span><span lang="es">Equipos, jugadores cercanos y saque</span></span></figcaption>
       </figure>
       <figure class="shot reveal">
-        <div class="frame"><img src="assets/iphone-history.jpg" loading="lazy" width="506" height="1100" alt="Historia meczów z podsumowaniem i kartami meczów" data-en="assets/en/iphone-history.jpg" data-alt-en="Match history with a summary and match cards" data-es="assets/es/iphone-history.jpg" data-alt-es="Historial con resumen y tarjetas de partidos"></div>
+        <div class="frame"><img src="assets/iphone-history.jpg" loading="lazy" width="506" height="1100" alt="Historia meczów z podsumowaniem, klubami i kaloriami" data-en="assets/en/iphone-history.jpg" data-alt-en="Match history with a summary, clubs and calories" data-es="assets/es/iphone-history.jpg" data-alt-es="Historial con resumen, clubes y calorías"></div>
         <figcaption><span lang="pl">Historia</span><span lang="en">History</span><span lang="es">Historial</span>
-          <span><span lang="pl">Podsumowanie, filtr i&nbsp;eksport</span><span lang="en">Summary, filter and export</span><span lang="es">Resumen, filtro y exportación</span></span></figcaption>
+          <span><span lang="pl">Kluby, kalorie, filtr i&nbsp;eksport</span><span lang="en">Clubs, calories, filter and export</span><span lang="es">Clubes, calorías, filtro y exportación</span></span></figcaption>
       </figure>
       <figure class="shot reveal">
         <div class="frame"><img src="assets/iphone-profile.jpg" loading="lazy" width="506" height="1100" alt="Profil gracza z poziomem, informacjami o grze i statystykami" data-en="assets/en/iphone-profile.jpg" data-alt-en="Player profile with level, playing details and statistics" data-es="assets/es/iphone-profile.jpg" data-alt-es="Perfil de jugador con nivel, datos de juego y estadísticas"></div>
@@ -301,14 +324,9 @@
           <span><span lang="pl">Poziom, styl gry i&nbsp;statystyki</span><span lang="en">Level, playing style and statistics</span><span lang="es">Nivel, estilo de juego y estadísticas</span></span></figcaption>
       </figure>
       <figure class="shot reveal">
-        <div class="frame"><img src="assets/iphone-stats.jpg" loading="lazy" width="506" height="1100" alt="Szczegóły meczu: wykres przebiegu i grafika z wynikiem do udostępnienia" data-en="assets/en/iphone-stats.jpg" data-alt-en="Match details: match flow chart and a shareable result image" data-es="assets/es/iphone-stats.jpg" data-alt-es="Detalles del partido: gráfico del partido e imagen del resultado para compartir"></div>
-        <figcaption><span lang="pl">Statystyki</span><span lang="en">Statistics</span><span lang="es">Estadísticas</span>
-          <span><span lang="pl">Breaki, serwis i&nbsp;przebieg meczu</span><span lang="en">Breaks, serve and match flow</span><span lang="es">Breaks, saque y desarrollo del partido</span></span></figcaption>
-      </figure>
-      <figure class="shot reveal">
         <div class="frame card-img"><img src="assets/share-card.jpg" loading="lazy" width="720" height="900" alt="Grafika z wynikiem meczu do udostępnienia" data-en="assets/en/share-card.jpg" data-alt-en="Shareable match result image" data-es="assets/es/share-card.jpg" data-alt-es="Imagen del resultado para compartir"></div>
         <figcaption><span lang="pl">Udostępnij</span><span lang="en">Share</span><span lang="es">Compartir</span>
-          <span><span lang="pl">Gotowa grafika na Instagram i&nbsp;WhatsApp</span><span lang="en">A ready image for Instagram and WhatsApp</span><span lang="es">Una imagen lista para Instagram y WhatsApp</span></span></figcaption>
+          <span><span lang="pl">Grafika z&nbsp;klubem na Instagram i&nbsp;WhatsApp</span><span lang="en">An image with the club for Instagram and WhatsApp</span><span lang="es">Una imagen con el club para Instagram y WhatsApp</span></span></figcaption>
       </figure>
     </div>
   </div>
@@ -323,7 +341,7 @@
     <div class="steps">
       <div class="card step reveal">
         <h3><span lang="pl">Ustaw mecz</span><span lang="en">Set up the match</span><span lang="es">Prepara el partido</span></h3>
-        <p><span lang="pl">Wybierz mecz towarzyski, turniejowy lub Americano. Dodaj graczy: wpisz imiona albo dodaj znajomych z&nbsp;Tapazo w&nbsp;pobliżu.</span><span lang="en">Choose a friendly, tournament or Americano match. Add players: type their names or add friends with Tapazo nearby.</span><span lang="es">Elige partido amistoso, de torneo o Americano. Añade jugadores: escribe sus nombres o añade amigos cercanos con Tapazo.</span></p>
+        <p><span lang="pl">Wybierz mecz towarzyski, turniejowy lub Americano. Dodaj graczy: wpisz imiona albo dodaj znajomych z&nbsp;Tapazo w&nbsp;pobliżu. Aplikacja podpowie klub, w&nbsp;którym grasz.</span><span lang="en">Choose a friendly, tournament or Americano match. Add players: type their names or add friends with Tapazo nearby. The app suggests the club you are at.</span><span lang="es">Elige partido amistoso, de torneo o Americano. Añade jugadores: escribe sus nombres o añade amigos cercanos con Tapazo. La app te sugiere el club en el que estás.</span></p>
       </div>
       <div class="card step reveal">
         <h3><span lang="pl">Graj z&nbsp;zegarkiem</span><span lang="en">Play with your watch</span><span lang="es">Juega con tu reloj</span></h3>
@@ -343,7 +361,7 @@
       <div class="shield"><svg class="i"><use href="#i-shield"/></svg></div>
       <div>
         <h2><span lang="pl">Twoje dane zostają u&nbsp;Ciebie</span><span lang="en">Your data stays with you</span><span lang="es">Tus datos se quedan contigo</span></h2>
-        <p><span lang="pl">Bez konta, bez serwerów, bez reklam i&nbsp;bez śledzenia. Tapazo nie zbiera żadnych danych, a&nbsp;Twój profil i&nbsp;zdjęcie zostają na Twoim iPhonie.</span><span lang="en">No account, no servers, no ads and no tracking. Tapazo does not collect any data; your profile and photo stay on your iPhone.</span><span lang="es">Sin cuenta, sin servidores, sin anuncios y sin seguimiento. Tapazo no recopila ningún dato; tu perfil y tu foto se quedan en tu iPhone.</span></p>
+        <p><span lang="pl">Bez konta, bez serwerów, bez reklam i&nbsp;bez śledzenia. Tapazo nie zbiera żadnych danych, a&nbsp;Twój profil i&nbsp;zdjęcie zostają na Twoim iPhonie. Lokalizacja służy tylko do wyszukania klubów i&nbsp;nie jest zapisywana.</span><span lang="en">No account, no servers, no ads and no tracking. Tapazo does not collect any data; your profile and photo stay on your iPhone. Your location is used only to find clubs and is not saved.</span><span lang="es">Sin cuenta, sin servidores, sin anuncios y sin seguimiento. Tapazo no recopila ningún dato; tu perfil y tu foto se quedan en tu iPhone. La ubicación solo se usa para buscar clubes y no se guarda.</span></p>
       </div>
       <a class="btn primary" href="privacy/"><span lang="pl">Polityka prywatności</span><span lang="en">Privacy policy</span><span lang="es">Política de privacidad</span></a>
     </div>
