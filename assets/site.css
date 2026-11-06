@@ -90,7 +90,9 @@ html.es [lang="pl"]:not(html) { display: none !important; }
 .btn.primary { background: var(--yellow); color: #000; }
 .btn.ghost { border: 1px solid rgba(255,255,255,.35); color: #fff; }
 .store { display: inline-flex; align-items: center; gap: 10px; padding: 9px 18px 9px 14px; border-radius: 12px;
-         background: #000; color: #fff; border: 1px solid rgba(255,255,255,.35); line-height: 1.15; }
+         background: #000; color: #fff; border: 1px solid rgba(255,255,255,.35); line-height: 1.15;
+         text-decoration: none; transition: transform .15s; }
+.store:hover { transform: translateY(-1px); }
 .store small { display: block; font-size: 11px; opacity: .75; }
 .store strong { font-size: 17px; }
 .trust { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 26px 0 0; padding: 0; list-style: none;
