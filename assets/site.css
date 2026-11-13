@@ -172,7 +172,9 @@ section.alt { background: var(--bg-alt); }
 @media (max-width: 900px) { .watch-gallery { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 600px) { .watch-gallery { grid-template-columns: repeat(2, 1fr); gap: 18px 14px; }
                             .watch-gallery .watch { border-radius: 34px; padding: 6px; }
-                            .watch-gallery .watch img { border-radius: 28px; } }
+                            .watch-gallery .watch img { border-radius: 28px; }
+                            .watch-gallery figure:last-child:nth-child(odd) { grid-column: 1 / -1; justify-self: center;
+                                                                             width: calc(50% - 7px); } }
 
 /* Formats */
 .chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 0; padding: 0; list-style: none; }
