@@ -23,6 +23,18 @@
       img.setAttribute('src', img.dataset[key]);
       img.alt = alt;
     });
+    // The watch demo plays in the page language too.
+    document.querySelectorAll('video[data-src-pl]').forEach(function (v) {
+      var src = v.dataset['src' + lang.charAt(0).toUpperCase() + lang.slice(1)];
+      var poster = v.dataset['poster' + lang.charAt(0).toUpperCase() + lang.slice(1)];
+      if (!v.dataset.labelPl) v.dataset.labelPl = v.getAttribute('aria-label');
+      if (v.dataset.lang === lang) return;
+      var playing = !v.paused;
+      v.dataset.lang = lang;
+      v.poster = poster;
+      if (v.dataset.loaded) { v.src = src; if (playing) v.play().catch(function () {}); }
+      v.setAttribute('aria-label', lang === 'en' ? v.dataset.labelEn : lang === 'es' ? v.dataset.labelEs : v.dataset.labelPl);
+    });
   }
 
   var hash = location.hash.slice(1);
@@ -45,6 +57,33 @@
     });
     var year = document.getElementById('year');
     if (year) year.textContent = String(new Date().getFullYear());
+  });
+})();
+
+// The watch demo loads and plays only while it is on screen; a tap pauses it.
+// With reduced motion it does not start by itself and shows the controls instead.
+(function () {
+  document.addEventListener('DOMContentLoaded', function () {
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    document.querySelectorAll('video[data-src-pl]').forEach(function (v) {
+      function load() {
+        if (v.dataset.loaded) return;
+        var lang = v.dataset.lang || document.documentElement.lang || 'pl';
+        v.src = v.dataset['src' + lang.charAt(0).toUpperCase() + lang.slice(1)];
+        v.dataset.loaded = '1';
+      }
+      if (reduce || !('IntersectionObserver' in window)) { v.controls = true; v.preload = 'metadata'; load(); return; }
+      var userPaused = false;
+      v.addEventListener('click', function () {
+        if (v.paused) { userPaused = false; v.play().catch(function () {}); } else { userPaused = true; v.pause(); }
+      });
+      new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { load(); if (!userPaused) v.play().catch(function () {}); }
+          else v.pause();
+        });
+      }, { threshold: 0.4 }).observe(v);
+    });
   });
 })();
 
